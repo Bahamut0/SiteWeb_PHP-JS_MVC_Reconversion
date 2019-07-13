@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col">
+        <ul class="list-group">
+            <li class="list-group-item d-flex flex-column justify-content-between">
+                <img src="<?php echo BASE_URL . $data_user['imageUrl'] ?>" alt="" class=" circle circleAccount">
+                <div class="row">
+                    <h2>Vos informations personnelles</h2>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p><span class="bold">Utilisateur :</span> <?php echo $data_user["first_name"] ?> <?php echo $data_user["last_name"] ?></p>
+                        <p><span class="bold">Email :</span> <?php echo $data_user["email"] ?></p>
+                        <p><span class="bold">Adresse Postale :</span> <?php echo $data_user["address"] ?></p>
+                        <p><span class="bold">Téléphone :</span> <?php echo $data_user["phone"] ?></p>
+                    </div>
+                </div>
+                <br>
+                <div class="row tacenter">
+                    <div class="col">
+                        <button class="btn btn-info"><a href="<?php echo route("account"); ?>">Modifier votre compte</a></button>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item d-flex flex-column justify-content-between ">
+                <i class="fas fa-gamepad"></i>
+                <h2>Vos parties Dragon Slayer</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Date de jeu :</th>
+                            <th>Résultat :</th>
+                            <th>Niveau de jeu :</th>
+                            <th>Arme :</th>
+                            <th>Armure :</th>
+                        </tr>
+                    </thead>
+                    <?php
+                    foreach ($dataGame as $key => $value) {
+                        ?>
+                    <tbody class="center">
+                        <tr>
+                            <td> <?php echo $value['game_date'] ?> </td>
+                            <td> <?php echo $value["game_result"] ?> </td>
+                            <td> <?php echo $value["game_level"] ?> </td>
+                            <td> <?php echo $value["sword"] ?> </td>
+                            <td> <?php echo $value["armor"] ?> </td>
+                        </tr>
+                    </tbody>
+
+                    <?php } ?>
+                </table>
+                <p><span class="bold">Nombres de parties Dragon Slayer :</span> <span class="badge badge-primary badge-pill"><?php echo count($dataGame) ?></span></p>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+
+		<main class="main1child logiciels ">
+				<h2 id="ancre_outils">Outils d'aide au développement</h2>
+
+	<!-- Voici l'item de liste n°1 sur NodeJs-->
+	
+		<ol class="upperHexa flexRowWrapSpaceAround">
+
+					<li>
+						<h3 id="inspecteur">L'inspecteur</h3>
+						<p class="step">Ctrl+Shift+I</p>
+						<p class="step">Parfait pour trouver ses erreurs lorsque vous coder notamment en javascript. Il suffit de se rendre sur l'onglet console. L'inspecteur vous donnera l'erreur qui fait bugger votre code et même la ligne qui où vous rendre pour la trouver. </p>
+						<p class="step">Idéal pour tester des modifications de code. Vous pouvez écrire depuis l'inspecteur pour voir les effets des changements que vous réaliserez.</p>
+						<p class="step">Utile pour définir son site en responsive. Vous serez exactement à partir de quelle taille d'écran vos éléments sont hors cadre.</p>
+					</li>
+					<li>
+						<h3 id="validator">Le site validator</a></h3>
+                        <p class="step">Allez sur le site <a href="https://validator.w3.org/" target="_blank">validator.w3.org</a>. Il vous permettra d'avoir la meilleure vérification de code possible.</p>
+						<p class="step">Il suffit de faire un copier coller de votre code et de le poser sur champs proposé. Ou d'envoyer votre fichier html ou css pour un test.</p>
+						<p class="step">Il est primordial de passer par le validator car s'il y a des erreurs en html et css, votre référencement en pâtira !</p>
+					</li>
+					<li>
+						<h3 id="fontawesome">FontAwesome</h3>
+						<p>Parfait pour placer des icônes devant vos titres ou à la place des puces de vos listes ! Les icônes sont libres d'accès et facilement stylisable</p>
+						<p class="step">Rendez-vous sur <a href="https://fontawesome.com/" target="_blank">le site de FontAwesome</a>. Vous avez le choix. VOus pouvez télécharger le dossier fontawesome et l'intégrer dans votre dossier de site web. L'autre possibilité est de vous rendre sur le lien <a href="https://fontawesome.com/start" target="_blank">Utiliser la version gratuite</a> et de copier le lien qui vous sera proposé sur le site.</p>
+						<p class="step">Vous placer un lien dans le head de votre document qui cible le fichier css de fontawesome que vous souhaité utilier. Le mieux c'est de prendre le "all.css" qui regroupe tout. Si vous n'avez pas téléchargé le dossier fontawesome, c'est le lien copié sur leur site que vous placez dans le header.</p>
+						<p class="step">Il y a deux moyens d'intégrer ces icônes. S'il s'agît d'une utilisation qui sera répétée sur des éléments identiques comme des titres ou des listes, il vaut mieux le faire en css. Vous ciblez vos éléments, par exemple h3 et vous lui attachez le pseudo-element before. Vous écrivez ensuite ses spécificités sans oublier son content (c'est l'unicode correspondant à l'icône que vous avez choisie) et de lui attribuer sa font-family!</p>
+						<p> Exemple: <br>
+                            <span class="bold">
+							h3:before{
+								content: "\f0a9";
+								font-family: "Font Awesome 5 Free";
+								display: inline-block;
+								padding-right: 2%;
+								vertical-align: middle;
+								font-weight: 900;
+							}</span>
+						</p>
+						<p>S'il s'agît d'une utilisation ponctuelle, il vaut mieux modifier le code html. Vous copier la balise <span class="bold">&#8249 i &#8250 </span>qui est proposée avec votre icone et la placer à l'intérieur de l'élément html que l'icone précède.</p>
+						<p>Exemple : <br>
+                            <span class="bold">
+                            &#8249h3&#8250&#8249i class="fas fa-question-circle"&#8250&#8249/i&#8250 Mon titre&#8249/h3&#8250
+                            </span>
+						</p>
+					</li>
+					<li>
+						<h3 id="googlefonts">Google Fonts</h3>
+						<p>Pour définir une ou plusieurs polices</p>
+						<p>Le procédé est le même qu'avec les icônes. Rendez-vous sur <a href="https://fonts.google.com/" target="_blank">GoogleFonts</a>. Dès que vous aurez sélectionné une police, l'on vous proposera soit d'utiliser un lien à mettre dans le header ou le css, soit de télécharger vos polices.</p>
+						<p>Que cela soit pour les icônes ou pour les polices, si vous les téléchargez, vous n'aurez pas à vous souciez de problème de connexion. En effet, les polices et icônes ne s'affichent plus en cas de perte de réseau. </p>
+					</li>
+					
+					<li>
+						<h3 id="git">Git</h3>
+						<p>Indispensable pour le travail collaboratif. </p>
+						<h4 class="step">Installation</h4>
+						<p>Rendez-vous sur <a href="https://git-scm.com/" target="_blank">la page officielle de Git </a> et téléchargez le programme. Il n'y a plus qu'à l'extraire dans le dossier de votre choix. </p>
+						<h4 class="step">Configuration</h4>
+						<p>Vous ouvrez l'invite de commande (IDC ou mieux CLI pour command line interface dans sa version anglaise)</p>
+						<p>Il faut configurer son mail : <span class="italic bold">git config --global user.email " bahamut007@outlook.fr"</span></p>
+						<p>Il faut configurer son nom d'utilisateur : <span class="italic bold">git config --global user.name " votre nom d'utilisateur"</span></p>
+						<p>Vous pouvez voir si les modifications ont été prises en compte avec <span class="italic bold">git config --list</span></p>
+						<h4 class="step">Initialisation</h4>
+						<p>Il suffit d'appeler le dossier où se trouve votre projet et de l'associer à Git depuis le CLI :<span class="italic bold"> c:\wamp64\www\mon_site-web</span>. Puis, si le chemin a bien été redéfini correctement, <span class="italic bold">git init</span>. Voilà vous avez initialisé votre projet sur Git. Par défaut, l'on vous annonce votre dépôt "le nom de votre dossier" est vide. C'est normal. Même si avez bien créer un site complet, le dépôt demeurera vide tant que vous n'aurez pas ajouter le contenu de votre dossier sur Git. </p>
+						<h4 class="step">L'intégration</h4>
+						<p>Si vous lancez la commande <span class="italic bold">git status</span>, sera listé l'ensemble de vos fichiers et dossiers. L'on vous recommendera de les ajouter avec la commande <span class="italic bold">git add .</span> . Si vous ne souhaitez ajouter qu'un fichier, il suffit de remplacer le point "." par le nom du fichier ou dossier que vous voulez ajouter.</p>
+						<h4 class="step">Les commits</h4>
+						<p>Les commits sont les sauvegardes de votre code à un moment t. Chaque commit devra suivre la commande add. Sinon il n'y a rien à commit !</p>
+						<p>Pour créer une sauvegarde. On saisi <span class="italic bold">git commit -m "nom de la sauvegarde"</span>. Le -m precise qu'il s'agît d'une modification.</p> 
+						<p>Pour ignorer des fichiers parmi ceux de notre liste à sauvegarder. L'on utilise la commande <span class="italic bold">touch gitignore</span>. Cela créera un fichier .gitignore sur lequel l'on mettra le nom des fichiers que l'on ne souhaite pas prendre en compte.</p>
+						<h4 class="step">Le log</h4>
+						<p>C'est l'historique des commits : <span class="italic bold">git log</span> Cela vous permet de récupérer l'id des différents commits réalisés. Je vous conseille d'écrire plutôt <span class="italic bold"> git log --online</span> pour plus de clarté si vous les appeler tous. Mais vous pouvez également sélectionner un log d'un dossier ou fichier en particulier: <span class="italic bold">git log -p nom du fichier</span>. Vous aurez ainsi toutes les modifications concernant le fichier demandé.Vous pouvez enfin préciser le nombre de commit à voir : <span class="italic bold">git log -n 1 nom du fichier</span>.</p>
+						<h4 class="step">Afficher les différences</h4>
+						<p>Il s'agit d'une comparaison entre les 2 derniers commits. Fonctionne grâce à la commande <span class="italic bold">git diff</span></p>
+						<h4 class="step">Reverse un commit</h4>
+						<p>L'on peut créer un commit qui fait le contraire d'un précédant : <span class="italic bold">git revert nom du commit à annuler</span></p>
+						<h4 class="step">Modifier le nom d'un commit</h4>
+						<p><span class="italic bold">git commit --amend -m "nouveau nom"</span>Cette modification ne peut être faîte si le commit a été pushé !</p>
+						<h4 class="step">Création de branches</h4>
+						<p>Il y a plusieurs branches enregistrées. Elles permettent de développer des fonctionnalités sans altérer la branche principale voire d'autres branches secondaires.</p>
+						<p>La nomenclature des branches la plus répendue est celle-ci: 
+							<br>Master, Hotflix, Release, Develop et Features.
+						</p> 
+						<p>Pour créer des branches une branche, il suffit de lancer <span class="italic bold"> git branch nom de la branche</span>. En lançant la commande <span class="italic bold">git branch</span>, la liste de toutes les branches existantes apparaît. L'on se trouve par défaut sur l'ancienne branche. L'on peut se diriger vers l'une d'elle grâce à la commande <span class="italic bold">git branch "nom de la branche" sur laquelle on souhaite se rendre</span>. L'on peut aussi créer une branche en se dirigeant automatiquement dessus :  <span class="italic bold">git checkout -b nom de la nouvelle branche</span></p>
+						<h4 class="step">Merger</h4>
+						<p>Lorsqu'on est satisfait de sa version, l'on peut l'envoyer vers la branche Master. Pour cela, après avoir commit sa branche develop par exemple, l'on retourne sur la branche Master avec un checkout. Une fois dessus :  <span class="italic bold">git merge nom de la branche que l'on veut associer à la branche Master</span>.</p>
+						<h4 class="step">Conflit pendant une merge</h4>
+						<p>En cas de conflits entre plusieurs branches, le code s'affiche en mettant en avant les zones de conflits. L'on supprime ou modifie le code puis on add et on commit<span class="italic bold">git commit -a "fix conflict"</span>. Enfin, on merge. </p>
+						<h4 class="step">Mettre son dossier en ligne avec Github</h4>
+						<p>Il vous suffit de créer votre compte sur Github. Vous demandez à ajouter un nouveau repository. Vous précisez le nom de ce repository et sa visibilité public (gratuit) ou privé (payant). Dans le champs "or push an existing repository from the command line" copiez le premier code "remote add origin" et coller le sur GIT. Faîte de même avec le second qui push. Git vous demandera vos identifiants GitHub que vous communiquerez.</p>
+						<p> Voilà, votre dossier est en ligne !</p>
+
+					</li>
+			<li>
+				<h3 id="nodeJs">NodeJs</h3>
+				<div class="contenant1">
+					<dl>
+						<dt class="h4">Définition classique</dt>
+
+							<dd><i class="fas fa-question-circle"></i>NodeJs, c'est quoi?</dd>
+							<dd><i class="fas fa-smile-beam"></i>C'est une plateforme de développement en JavaScript, open source et orienté client serveur.</dd>
+							<dd><i class="fas fa-question-circle"></i>Quoi?!</dd>
+							<dd><i class="fas fa-smile-beam"></i>C'est une plateforme de développement en JavaScript, open source et orienté client serveur.</dd>
+							<dd><i class="fas fa-question-circle"></i>Quoi?!</dd>
+							<dd><i class="fas fa-grin-beam-sweat"></i>Il faut savoir renoncer dans la vie!</dd>
+
+						<dt class="h4">Définition pour les gens normaux</dt>
+
+							<dd><i class="fas fa-arrow-right"></i>Une plateforme est un ensemble d'outils destinés au stockage et au partage de contenus virtuels. NodeJs n'est donc pas un <span class="italic">framework</span> (infrastructure logicielle).</dd>
+							<dd><i class="fas fa-arrow-right"></i>NodeJs est non seulement écrit en JavaScript (Js) mais permet aussi le développement d'application en JS. JavaScript est un langage dont la puissance réside dans la mise en place d'événements. Grossomodo, vous posez un comportement de la part de l'internaute et la réaction obtenu par le navigateur. <br>Comme dirait le Mérovingien: <span class="citation">C'est une relation de cause à effet!</span> </dd>
+							<dd><i class="fas fa-arrow-right"></i>Il est open source donc son code source est disponible et peut être modifié par une large communauté. NodeJs est d'ailleurs utilisé par beaucoup d'entreprises.</dd>
+							<dd><i class="fas fa-arrow-right"></i>Enfin, NodeJS est orienté client-serveur. Il n'est donc pas non plus un <span class="italic">serveur</span> (Système informatique permettant la consultation et le traitement direct d'une banque de données). Il participe à la communication des données entre <span class="italic">le client</span> ( l'ordinateur de l'internaute ) et le serveur. C'est à dire que c'est le client qui va activer JavaScript.</dd>
+					</dl>
+					<p class="bold">Conclusion: NodeJs, vulgairement expliqué, c'est la possibilité de récupérer tout programme codé en JS répertorié dans une base de donnéé pour les réutiliser pour soi. C'est le partage suprême des programmes js!</p>
+					</div>
+					<section class="contenu2">
+						<h4>Recommandations</h4>
+						<p><i class="fas fa-check-square"></i>D'abord, il va falloir vous familiariser avec l'invite de commande. Puis il faudra l'installer. Vous apprendrez ensuite à créer vos propres applications. L'utilisation pourra être ardue au départ. Mais tenez bon, vous en serez récompensé.</p>
+						<p><i class="fas fa-check-square"></i>Je l'ai cité auparavant dans la section <a href="<?php echo route("teachers"); ?>#site_particuliers" target="_blank">"Comment apprendre"</a>. Je vous le recommande donc à nouveau dans cette thématique: Grafikart. Il possède une playlist Youtube sur NodeJS que je vous invite à visionner dans son intégralité. <span class="bold"><a href="https://www.youtube.com/playlist?list=PLjwdMgw5TTLV7VsXd9NOeq39soYXORezN" target="_blank">ICI</a></span>.</p>
+
+						<p>Dans tous les cas, voici deux vidéos de lui sur Node JS pour vous donner un 1er aperçu.</p>
+
+						<div class="video">
+							<div class=" videos video1"><iframe width="560" height="315" src="https://www.youtube.com/embed/0PA69L88HeI"  allow=" encrypted-media" allowfullscreen></iframe></div>
+							<div class=" videos video2"><iframe width="560" height="315" src="https://www.youtube.com/embed/53U0TBKFwUw" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+						</div>
+					</section>
+
+					</li>
+					<li>
+						<h3 id="browsersync">BrowserSync</h3>
+						<p>Pour observer en live les modifications que vous effectuez sur votre site. A la seconde où vous aurez enregistrer, les modifications se feront automatiquement.</p>
+						<p>Il s'agît de l'un des outils que vous pouvez obtenir via NodeJs. Une fois le logiciel NodeJs installé, il vous suffira de télécharger le programme BrowserSync depuis l'invite de commande de NodeJs.</p>
+					</li>
+
+                    <li>
+                        <h3>Unsplash</h3>
+                        <p class="step">Il suffit de vous rendre sur la page d'accueil d'<a href="https://unsplash.com" target="_blank">Unsplash</a></p>
+                        <p class="step">Les images proposées sur ce site web sont totalement gratuites et peuvent être utilisées de manière libre. Pas de conflit juridique possible.</p>
+
+                    </li>
+
+				</ol>
+
+				<div class="conclusion">
+					<p class="bold">D'autres outils et logiciels vous seront utiles et feront l'objet d'une analyse prochaine. Parmis eux: Boilerplate, Gulp ou Grunt et enfin Photoshop. </p>
+				</div>
+		</main>

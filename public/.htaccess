@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+#condition: si la requête demandé ne correspond pas à un nom de fichier
+RewriteCond %{REQUEST_FILENAME} !-d
+#condition: si la requête demandé ne correspond pas à un nom de dossier
+
+RewriteRule ^(.+) index.php?url=$1 [QSA,L]
+#Réécrire pour toute chose (.) qui commence par (^) un caractère quelconque(+) suivi du paramètre url qui reprend l'index saisi par le (.+) grâce au $1
+#[Query String Append, Last] ajoute la chaîne de caratère(donc les paramètres définis puis Last car il s'agît de la dernière demande htaccess), Cela prend donc les données de la chaîne de requête

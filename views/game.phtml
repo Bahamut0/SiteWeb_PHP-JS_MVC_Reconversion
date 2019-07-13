@@ -1,0 +1,43 @@
+<h2 id="ancre_portefolio">Mini-jeu : Dragon Slayer !</h2>
+<div id="dragon">
+    <h3 id="h2_rotate">
+			<span
+                class="txt-rotate"
+                data-period="1000"
+                data-rotate='[ "Et si on jouait à un jeu ?", "Un jeu avec des dragons et des chevaliers...", "Un jeu avec des épées et des crocs?", "Un jeu pour les amateurs de frissons!", "Et si on jouait à Dragon Slayer ?" ]'></span>
+    </h3>
+
+    <button id="activationButton" type="button">Start</button>
+    <button id="roundButton" type="button" class="display_none">Next</button>
+
+    <div class="clear"></div>
+
+    <!--initialization-->
+    <div class="paraIni">
+        <p class="hiddenPara"> Vous jouez en niveau <span class="level"></span>.<span class="levelDescription"></span></p>
+        <p class="hiddenPara">Vous commbattez avec <span class="sword"></span>.<span class="swordDescription"></span></p>
+        <p class="hiddenPara">Vous possédez une <span class="armor"></span>.<span class="armorDescription"></span></p>
+    </div>
+
+    <!--looping-->
+    <div class="paraLooping">
+        <p>Le dragon possède <span class="hpDragon"></span> hp. Xéna en possède <span class="hpXena"></span>.</p>
+        <p class="hiddenPara" id="paraToBePushed" ><span class="winny"></span> a remporté cette manche en infligeant <span class="damageP"></span> points de dommage !</p>
+    </div>
+
+    <!--result-->
+    <div>
+        <p class="gameWinner"></p>
+        <p id="winner_img"></p>
+        <?php if (auth()->isLogged()){?>
+            <form method="post" id="dragon_form">
+                <?php csrf_token()?>
+                <input type="hidden" id="inputHiddenGameData" name="inputHiddenGameData">
+                <button id="saveButton" class="display_none" type="submit">Save</button>
+            </form>
+            <?php
+        } ?>
+        <button id="refreshButton" class="display_none" type="button">Refresh</button>
+
+    </div>
+</div>

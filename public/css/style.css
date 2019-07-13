@@ -1,0 +1,803 @@
+@font-face{
+	font-family: 'Lato', sans-serif;
+
+}
+/*style de base*/
+
+body{
+	background-color: gainsboro;
+}
+a:hover{
+	text-decoration: none;
+}
+.circleAccount {
+	border-radius: 50%;
+	height: 75px;
+	width: 75px;
+}
+/*footer*/
+footer{
+
+	font-size: 30px;
+	font-weight: bolder;
+	background-color: #141414;
+	color: #ffffff;
+	text-align: center;
+	height: 200px;
+	padding: 2%;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+footer p{
+	color: #ffffff;
+	line-height: normal;
+}
+
+/*header*/
+
+header{
+
+	background-image: url("../img/matrix.jpg");
+	-webkit-background-size: contain;
+	background-size: contain;
+	color: #ffffff;
+
+}
+header nav{
+
+	background-color: #141414;
+}
+h1{
+	font-size: 2em;
+	padding: 5% 0;
+	font-weight: bold;
+	text-align: center;
+	font-family: Oswald, serif;
+
+}
+header p{
+	font-size: 1.5em;
+	padding: 5px;
+	font-style: italic;
+	text-align: center;
+
+}
+
+header a{
+	font-size: 1em;
+	color: #ffffff;
+
+}
+header a:hover{
+    color: rgba(180,230,255,1);
+
+}
+nav ul{
+
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+	text-align: center;
+}
+nav a{
+	display: block;
+	padding: 1em;
+	text-align: center;
+	
+}
+nav img:hover{
+		transform: scale(1.3);	
+		transition: 1s;
+
+}
+.contact{
+    margin: 50px 0;
+    display: block;
+
+}
+.fas, .fab{
+    padding: 0 15px;
+    color: #3d7e9a;
+}
+
+.has-children{
+	position: relative;
+	
+}
+.has-children:hover > .sous-menu{
+
+	
+	display: flex;
+	z-index: 2;
+
+}
+.has-children:hover{
+	z-index: 1;
+}
+.sous-menu{
+	display: none;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	width: 250px;
+	position: absolute;
+	background-color: rgb(112,128,144);
+}
+.sous-menu .sous-menu{
+	top: 0;
+	left: 100%;
+	background-color: rgb(119,136,153);
+}
+.sous-menu .is-active {
+
+	display: flex;
+}
+
+/*style général du main*/
+
+main{
+	
+	display: flex;
+	max-width: 100%;
+}
+main a{
+	color: rgb(50,50,140);
+	max-width: 100%;
+	font-weight: bold;
+	
+}
+#content{
+	background-color: #eeeeee;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container{
+	width: 80%;
+	margin: 0 auto;
+
+}
+h2,h3,h4,h5{
+	text-align: center;
+	padding-left: 2%;
+	font-family: Lato, serif;
+    font-weight: bold;
+
+}
+h2{
+	font-size: 1.5em;
+	line-height: 1.5em;
+	padding: 4% 0;
+	color: #404854;
+
+}
+h3{
+	font-size: 1.4em;
+	color: #555470;
+	line-height: 1.3em;
+	padding: 5% 0;
+	
+}
+h4, .h4{
+	line-height: 1.2em;
+	color: rgba(75,64,111,0.8);
+	font-size: 1.1em;
+	padding: 7% 2%;
+}
+h5, .h5{
+	padding: 5% 0;
+
+}
+iframe{
+	max-width: 100%;
+	max-height: 300px;
+}
+.tacenter{
+	text-align: center;
+}
+.taright{
+	text-align: right;
+}
+.taleft, .step{
+	text-align: left;
+}
+.step:before{
+	content: "\f0a9";
+	font-family: "Font Awesome 5 Free", serif;
+	display: inline-block;
+	padding-right: 2%;
+	vertical-align: middle;
+	font-weight: 900;
+}
+.purple{
+	color: rebeccapurple;
+}
+.red{
+	color: red;
+}
+.square li, .square dd{
+	list-style-type: none;
+
+}
+.square li:before, .square dd:before{
+	content: "\f0c8";
+	font-family: "Font Awesome 5 Free", serif;
+	display: inline-block;
+	padding-right: 2%;
+	font-size: 10px;
+	vertical-align: middle;
+	color: #3d7e9a;
+	font-weight: 900;
+	
+}
+.bold{
+	font-weight: bold;
+}
+.italic{
+	font-style: italic;
+	
+}
+
+.ulCercle>li{
+	list-style-type: circle;
+	list-style-position: inside;
+}
+.upperHexa li p{
+	margin-bottom: 25px;
+}
+.flexRowWrapSpaceAround{
+	
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.pad10{
+	padding: 10px;
+}
+.bolder-30px{
+	font-size: 30px;
+	font-weight: bolder;
+
+}
+.fxb100{
+	flex-basis: 100%;
+}
+/*styles du contenu des pages*/
+/*pages ayant 1 enfant : */
+
+.main1child{
+
+	
+	display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
+
+/*page 1 : presentation */
+.presentation{
+	padding: 30px;
+	line-height: 2em;
+	text-align: center;
+
+}
+.presentation img{
+	width: 80%;
+}
+
+.point{
+	margin: 30px auto;
+	text-align: center;
+	
+}
+.pb:before{
+	content: "¤ la pillule bleue: ";
+	color: blue;
+
+}
+
+.pr:before{
+	content: "¤ la pillule rouge: ";
+	color: red;
+}
+.presentation .fas{
+	padding: 5px;
+}
+
+/*page 4: ide-edt*/
+.ide .part1{
+	margin-bottom: 10%;
+	width: 90%;
+}
+.ide .part2{
+	border: 1px solid #759;
+	border-radius: 4px;
+	box-shadow: 3px -2px 10px 1px #000;
+	margin-bottom: 15px;
+	width: 90%;
+}
+.ide, .langages{
+	font-size: 1.4rem;
+}
+
+.part2 td:nth-of-type(odd), .part2 th:nth-of-type(odd){
+	flex-basis: 20%;
+}
+.part2 td:nth-of-type(even), .part2 th:nth-of-type(even){
+	flex-basis: 80%;
+}
+
+td{
+	padding: 5px;
+
+}
+.main1child .part1 h3{
+	background-color: rgba(107,157,224,0.2);
+}
+
+td:nth-child(odd){
+	background-color: rgba(60,105,179, 0.2);
+}
+td:nth-child(even){
+	background-color: rgba(107,157,224,0.2);
+}
+th{
+	background-color: rgba(45,65,173,0.2);
+	text-align: center;
+}
+
+/*page 5: langage*/
+.langages{
+	padding: 2%;
+}
+.langages table{
+	border: 1px solid #759;
+	border-radius: 4px;
+	box-shadow: 3px -2px 10px 1px #000;
+
+
+}
+/*page 6: logiciels*/
+
+.logiciels>ol>li{
+	width: 100%;
+}
+.video{
+
+	
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+}
+
+.logiciels h3,  .logiciels h4, .logiciels h5, .h3,.h4,.h5 {
+	padding: 5% 0;
+	margin: 0;
+	line-height: 1em;
+	text-align: left;
+}
+.logiciels h2{
+	text-align: center;
+
+}
+.logiciels{
+	padding: 2%;
+}
+/*portefolio*/
+
+#funny_slider button{
+	width: 150px;
+	background-color: rgba(100,255,200,0.5);
+}
+.marginAuto{
+	display: block;
+	margin: 20px auto;
+}
+
+#funny_slider figcaption{
+	font-size: 1em;
+}
+#funny_slider img{
+	width: 30%;
+	height: 200px;
+	display: block;
+	margin: 10px auto;
+}
+#funny_slider .fas{
+	font-size: 60px;
+	padding: 10px auto;
+}
+#slide_button{
+	text-align: center;
+}
+.random{
+	display: block;
+	margin: 30px auto;
+	padding: 30px;
+}
+.toggleHide{
+	display: none;
+	text-align: center;
+}
+#toggleButton{
+	padding: 5px;
+}
+.borderDiv{
+	background:
+			url("../img/tree.jpg")
+			top center
+			no-repeat
+			padding-box
+			content-box ;
+	border: 1px groove #3d7e9a;
+	box-shadow: 6px 6px 12px #082F70;;
+	margin-bottom: 30px;
+	width: 80%;
+
+
+}
+.borderDiv h3{
+	color: #000;
+}
+
+/*adressbook*/
+
+#address_book{
+	
+	display: flex;
+	flex-wrap: nowrap;
+}
+/*côté gauche*/
+#address_book aside{
+	height: 100vh;
+	flex-basis: 25%;
+	border-right: 1px solid #e0e0e0;
+
+}
+#addressbook_main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	width: 100%;
+}
+#address_book nav{
+	display: flex;
+	flex-flow: column wrap ;
+}
+#address_book aside a{
+	flex: 1 1 auto;
+	padding: 15px;
+	border-bottom: 1px solid #e0e0e0;
+
+}
+#address_book a{
+	font-size: 1.1em;
+	display: block;
+	width: 100%;
+}
+/* côté droit*/
+#address_book form{
+	flex-basis: 70%;
+	padding: 50px 20px;
+	display: flex;
+	flex-flow: column;
+
+}
+#address_book label{
+	display: block;
+	flex: 1 1 auto;
+	margin-bottom: 20px;
+
+}
+#address_book input{
+	display: block;
+	flex: 1 1 auto;
+	padding: 5px;
+
+}
+
+#address_book .active, #address_book nav a:hover, #address_book button:hover{
+	background-color: rgba(211,211,255, 0.4);
+	color: #fff;
+}
+#address_book section{
+
+	margin-top: 6px;
+	font-size: 2em;
+	flex: 1 1 auto;
+}
+
+#address_book button{
+	border-radius: 5px;
+	padding: 8px;
+	font-size: 1.2rem;
+}
+#newContact{
+	margin-bottom: 25px;
+}
+#address_book .aButton{
+	text-align: right;
+}
+.navContact{
+	text-align:left;
+}
+#address_book i{
+	content: "\f057";
+	display: block;
+	font-family: "Font Awesome 5 Free", serif;
+	color: #4a769b;
+	padding-right: 10px;
+
+}
+#display_contact p{
+	text-align: center;
+	font-size: 2rem;
+	line-height: normal;
+}
+/* Gif Generator */
+#giphy_form{
+	font-size: 1.5em;
+	width: 90%;
+	margin: 20px auto;
+
+}
+#gif{
+	background-color: #ffffff;
+}
+.gif_img{
+	display: inline-block;
+	width: 49%;
+	height: 250px;
+	padding: 2%;
+}
+.label_gif{
+	display: block;
+	margin-bottom: 10px;
+}
+#gif_button{
+
+	border-radius: 7px;
+	padding: 10px;
+	font-size: 1.5rem;
+	display: block;
+	margin: 25px auto;
+}
+#gif_button:hover{
+	background-color: rgba(55, 210, 150, 0.2);
+	transition: 0.7s;
+}
+#giphy_form{
+	text-align: center;
+}
+#giphy_form input, #address_book input{
+
+	padding: 15px;
+	border-radius: 7px;
+	font-size: 1.5rem;
+	max-width: 100%;
+	text-align: center;
+	display: block;
+	margin: 20px auto;
+
+}
+/* Profil */
+.fa-gamepad {
+	font-size: 2em;
+}
+
+/*pages ayant 2 ou 3 enfants:
+ /*preparation*/
+.main2child, .main3child{
+	/*padding: 1% 2%;*/
+	font-size: 1.1em;
+	line-height: 1.7em;
+	text-align: justify;
+	
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-content: center;
+
+}
+
+.main3child .bold{
+	padding: 7% 0;
+}
+
+.main3child{
+	list-style-position: outside;
+}
+.section-gauche, .section-droite{
+
+		flex-basis: 45%;
+		box-shadow: 1px -2px 11px -1px #000;
+		padding: 2%;
+}
+
+/* page 3: enseignants*/
+
+.main3child section{
+	flex-basis: 28%;
+	box-shadow: 3px -2px 10px 3px #000;
+	padding: 2%;
+	height: auto;
+
+}
+.main3child h3, .main3child h4 {
+	vertical-align: top;
+
+}
+
+.span_avis{
+	font-weight: bold;
+	font-style: italic;
+
+}
+
+
+/*responsive*/
+/*
+le parent est en flex
+le parent est a mettre en column wrap
+l'enfant définit le flex basis et plus particulièrement pour éviter les problèmes avec IE en flex : 1 1 auto
+
+ */
+@media (max-width: 1160px) { /*tableau + main3child*/
+	.main3child{
+		flex-flow: column wrap;
+	}
+	.main3child section, .fxb100, td, .part2 td:nth-of-type(even), .part2 td:nth-of-type(odd){
+		flex: 1 1 auto;
+	}
+	th{
+		display: none;
+	}
+	td{
+		display: flex;
+		flex-flow: column wrap;
+
+	}
+	td p, td a{
+		flex: 1 1 auto;
+
+	}
+	.langages h3{
+		padding: 40px;
+
+	}
+}
+@media (max-width: 920px){ /*nav + main2child + formulaire*/
+	nav ul, .main2child, .video{
+
+		display: flex;
+		flex-flow: column wrap;
+		
+	}
+	.main2child section, #form_address_book{
+
+		flex: 1 1 auto;
+	}
+	.marginBottom25{
+		margin-bottom: 25px;
+	}
+	nav{
+		height: auto;
+		
+	}
+	.sous-menu{
+		position: static;
+		
+	}
+	#gif_generator input, #address_book input, #address_book button{
+		font-size: 1rem;
+
+	}
+	#gif_generator label{
+		font-size: 1.2rem;
+
+	}
+
+}
+@media (max-width: 780px) {
+	#address_book input{
+		font-size: 0.8rem;
+	}
+}
+@media (max-width: 650px){
+	h2{
+		font-size: 1.6em;
+	}
+	iframe{
+		max-width: 200px;
+		max-height: 150px;
+		display: block;
+		margin: 10px auto;
+	}
+
+	.main2child, .main3child{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+	.main2child section, .main3child section{
+		width: 100%;
+
+	}
+	.logiciels{
+		font-size: 1em;
+	}
+
+	#address_book{
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	#address_book aside{
+		height: auto;
+	}
+	#address_book .aButton{
+		text-align: center;
+	}
+
+	#funny_slider button, #address_book button{
+		width: 100px;
+		height: 75px;
+		display: block;
+		text-align: center;
+		font-size: 0.7rem;
+		margin: 10px auto;
+	}
+	#form_address_book .aButton{
+		flex: 1 1 auto;
+		margin-top: 80px;
+	}
+
+}
+@media (max-width: 400px){
+	h1{
+		font-size: 1.3em;
+	}
+	h2{
+		font-size: 1em;
+	}
+
+	h3{
+		font-size: 0.9em;
+	}
+
+	.main2child, .main3child, .logiciels, .presentation , .presentation blockquote, header p, .main1child{
+		font-size: 0.8em;
+	}
+	.main1child{
+		text-align: center;
+	}
+	table{
+		text-align: justify;
+	}
+
+	iframe, img{
+		max-width: 100px;
+		max-height: 100px;
+
+	}
+	#address_book input{
+		font-size: 0.6rem;
+	}
+
+}
+@media (max-width: 350px){
+	.container{
+		width: 100%;
+	}
+
+}

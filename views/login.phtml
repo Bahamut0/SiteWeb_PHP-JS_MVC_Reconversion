@@ -1,0 +1,26 @@
+<h2>
+    Connectez-vous !
+</h2>
+
+<form  class="pad10" method="post">
+    <?php csrf_token()?>
+    <div class="form-group row">
+        <label for="email" class="col-lg-4 col-form-label">Email:</label>
+        <div class="col-lg-7">
+            <input type="email" class="form-control" id="email"
+                   placeholder="Entrez votre adresse email"  name="email" required>
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <label for="password" class=" col-lg-4 col-form-label">Mot de passe:</label>
+        <div class="col-lg-7"><input type="password" class="form-control" id="password"                 placeholder="Saisissez un mot de passe" name="password" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-10 taright">
+            <button type="submit" class="btn btn-primary" name="update">Se connecter</button>
+        </div>
+    </div>
+</form>

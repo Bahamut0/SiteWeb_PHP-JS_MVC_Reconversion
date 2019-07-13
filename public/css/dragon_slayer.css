@@ -1,0 +1,104 @@
+#h2_rotate {
+  	font-weight: 200;
+  	margin: 0.4em 0;
+  	font-size: 1.5em;
+  	text-align: center;
+  	color: rgba(50,180,150,0.9);
+}
+#dragon{
+	height: 600px;
+	width: 100%;
+	background:
+			url("../img/dragon_slayer/landscape.jpg")
+			top center
+			no-repeat
+			padding-box
+			content-box;
+	-webkit-background-size: 100% 600px;
+	background-size: 100% 600px;
+}
+#dragon_img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#dragon audio{
+	display: block;
+
+}
+.displayPara{
+	display: block;
+	
+}
+
+#activationButton,  #refreshButton{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	background-color: rgba(0,230,50,0.5);
+	text-align: center;
+	
+}
+#roundButton, #saveButton{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	background-color: rgba(0,50,255,0.5);
+	text-align: center;
+	float: right;
+
+}
+.clear{
+	clear: both;
+}
+#dragon p{
+	font-size: 25px;
+	color: #fff;
+	text-align: center;
+	
+}
+.level, .sword, .armor{
+	color: darkred;
+	text-transform: uppercase;
+	font-family: fantasy;
+}
+#dragon img{
+	margin: 10px auto;
+	display: block;
+	
+}
+.display_none{
+	display: none;
+}
+
+.gameWinner{
+	font-size: 35px;
+	color: darkred;
+}
+.hpXena, .hpDragon{
+	color: orange;
+}
+
+.paraIni, .paraLooping, .dbz, .starwars{
+	display: none;
+	
+}
+.gif_winny{
+	width: 300px;
+	height: 200px;
+}
+#img_winner_dragon, #img_winner_knight{
+	width: 300px;
+	height: 250px;
+
+}
+@media (max-width: 650px){
+	#dragon{
+		height: 800px;
+		background-size: 100% 850px;
+	}
+}
+.paraIni p{
+	text-align: left;
+	line-height: normal;
+}

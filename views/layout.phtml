@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Reconversion Développeur Web</title>
+		<meta charset="utf-8">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta name="description" content="Comment réussir sa reconversion en développeur web? Préparation, Formation
+		et financement. La pilule verte des reconvertis. ">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="<?php echo BASE_URL?> /fontawesome/css/all.css">
+		<link rel="stylesheet" href="<?php echo BASE_URL?> /css/reset.css">
+		<link rel="stylesheet" href="<?php echo BASE_URL?> /css/style.css">
+        <link rel="stylesheet" href="<?php echo BASE_URL?> /css/dragon_slayer.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+        <style>
+
+            @media (max-width: 1160px) and (-ms-high-contrast:none)
+            {
+                /* Internet Explorer Only */
+
+                .part2 td:nth-of-type(odd), td:nth-of-type(odd){
+                    display: unset;
+
+                }
+                .part2 td:nth-of-type(even), td:nth-of-type(even){
+                    display: table;
+
+                }
+                td p, td a{
+                    padding: 5px;
+                }
+            }
+        </style>
+
+	</head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Reconversion Développeur Web</h1>
+                <p>La pilule verte des reconvertis!</p>
+                <a href="mailto:bahamut007@outlook.fr" class="contact"><i class="fas fa-envelope"></i>Me contacter</a>
+
+                <?php if (!auth()->isLogged()){?>
+                    <a href="<?php echo route("registration"); ?>"  name="register">S'inscrire</a>
+                    <br>
+                    <a href="<?php echo route("login") ?>"  name="login">Se connecter</a>
+
+                <?php } else{?>
+                    <div class="taright">
+                        <a href="<?php echo route("profile"); ?>">
+                            <i class="fas fa-user"></i><?php
+                            if(!empty($data_user["first_name"]) && !empty($data_user["last_name"])){
+
+                                echo $data_user["first_name"];
+                                echo " ".$data_user["last_name"];
+                            }
+                            else{
+                                ?>Profil<?php
+                            }
+                            ?>
+                        </a>
+                        <br>
+                        <a href="<?php echo route("logout"); ?>">
+                            <i class="fas fa-sign-out-alt"></i>Se déconnecter </a>
+                    </div>
+                <?php }?>
+
+
+
+                <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="<?php echo route("home"); ?>"><img src="<?php echo BASE_URL?> /img/homeM.png" alt="Home"></a>
+
+                    </li>
+                    <li class="has-children">
+                        <a href="<?php echo route("preparation"); ?>#environnement">Préparation</a>
+                        <ul class="sous-menu">
+                            <li class="has-children"><a href="<?php echo route("preparation"); ?>#environnement">L'environnement</a>
+                                <ul class="sous-menu">
+                                    <li><a href="<?php echo route("preparation"); ?>#os">OS</a></li>
+                                    <li><a href="<?php echo route("preparation"); ?>#clavier">Clavier</a></li>
+                                    <li><a href="<?php echo route("preparation"); ?>#cli">L'invite de commande</a></li>
+                                    <li><a href="<?php echo route("preparation"); ?>#vocabulaire">Vocabulaire </a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children"><a href="<?php echo route("preparation"); ?>#metier">Le métier</a>
+                                <ul class="sous-menu">
+                                    <li><a href="<?php echo route("preparation"); ?>#client">Le client</a></li>
+                                    <li><a href="<?php echo route("preparation"); ?>#protypeur">Le protypeur</a></li>
+                                    <li><a href="<?php echo route("preparation"); ?>#webdesigner">Le webdesigner</a></li>
+                                    <li><a href="<?php echo route("preparation"); ?>#integrateur">L'intégrateur</a></li>
+                                    <li><a href="<?php echo route("preparation"); ?>#front">Développeur front-end</a></li>
+                                    <li><a href="<?php echo route("preparation"); ?>#back">Développeur back-end</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="<?php echo route("teachers"); ?>#ancre_enseignement">Formation</a>
+                        <ul class="sous-menu">
+                            <li class="has-children">
+                                <a href="<?php echo route("teachers"); ?>#autodidacte">Autodidacte</a>
+                                <ul class="sous-menu">
+                                    <li><a href="<?php echo route("teachers"); ?>#site_pro">Sites de professionnels</a></li>
+                                    <li><a href="<?php echo route("teachers"); ?>#site_particuliers">Sites de particuliers</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="has-children">
+                                <a href="<?php echo route("teachers"); ?>#academique">Académique</a>
+                                <ul class="sous-menu">
+                                    <li><a href="<?php echo route("teachers"); ?>#ecole">Les écoles</a></li>
+                                    <li><a href="<?php echo route("teachers"); ?>#cursus">Les cursus</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="has-children">
+                                <a href="<?php echo route("teachers"); ?>#form_pro">Professionnelle</a>
+                                <ul class="sous-menu">
+                                    <li><a href="<?php echo route("teachers"); ?>#rncp">Titres RNCP</a></li>
+                                    <li><a href="<?php echo route("teachers"); ?>#ecole_pro">Formateurs</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="<?php echo route("ide"); ?>#ancre_ide">IDE et EDT</a>
+                        <ul class="sous-menu">
+                            <li><a href="<?php echo route("ide"); ?>#choisir_ide">Comment choisir</a></li>
+                            <li><a href="<?php echo route("ide"); ?>#best_ide">Top 3 des IDE et EDT</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="<?php echo route("languages"); ?>#ancre_langage">Langages</a>
+                        <ul class="sous-menu">
+                            <li><a href="<?php echo route("languages"); ?>#langage">Langages</a></li>
+                            <li><a href="<?php echo route("languages"); ?>#frameworks">Frameworks</a></li>
+                            <li><a href="<?php echo route("languages"); ?>#cms">CMS</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="<?php echo route("software"); ?>#ancre_outils">Logiciels</a>
+                        <ul class="sous-menu">
+
+                            <li><a href="<?php echo route("software"); ?>#inspecteur">L'inspecteur</a></li>
+                            <li><a href="<?php echo route("software"); ?>#validator">Le validator</a></li>
+                            <li><a href="<?php echo route("software"); ?>#fontawesome">FontAwesome</a></li>
+                            <li><a href="<?php echo route("software"); ?>#googlefonts">GoogleFonts</a></li>
+                            <li><a href="<?php echo route("software"); ?>#git">Git</a></li>
+                            <li><a href="<?php echo route("software"); ?>#nodeJs">Node JS</a></li>
+                            <li><a href="<?php echo route("software"); ?>#browsersync">Browsersync</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="<?php echo route("portefolio"); ?>">Portefolio</a>
+                        <ul class="sous-menu">
+
+                            <li><a href="<?php echo route("portefolio"); ?>#funny_slider">Funny Slider</a></li>
+                            <li><a href="<?php echo route("portefolio"); ?>#address_book">Carnet d'adresse</a></li>
+                            <li><a href="<?php echo route("portefolio"); ?>#gif_generator">Gif Generator</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="<?php echo route("game"); ?>">Mini jeu</a></li>
+                </ul>
+                </nav>
+            </header>
+            <main >
+                <div id="content">
+                    <?php echo $viewContent ?>
+                </div>
+            </main>
+            <footer class=" footer">
+                <p class="pf">Copyright 2018 - Tous droits réservés</p>
+            </footer>
+        </div>
+        <script>
+            let base_url="<?php echo BASE_URL;?>";
+        </script>
+        <script src="https://cdn.polyfill.io/v2/polyfill.js?features=fetch"></script>
+        <script src="<?php echo BASE_URL?> /js/event.js"></script>
+        <script src="<?php echo BASE_URL?> /js/addressbook.js"></script>
+        <script src="<?php echo BASE_URL?> /js/funny_slider.js"></script>
+        <script src="<?php echo BASE_URL?> /js/gif_generator.js"></script>
+        <script src="<?php echo BASE_URL?> /js/app.js"></script>
+        <script src="<?php echo BASE_URL?> /js/utilities.js"></script>
+        <script src="<?php echo BASE_URL?> /js/dragon_slayer.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="<?php echo BASE_URL?> /js/bootstrap.js"></script>
+    </body>
+
+</html>

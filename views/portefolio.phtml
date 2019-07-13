@@ -1,0 +1,74 @@
+
+<main class="main1child">
+
+        <h2>Mes applications</h2>
+
+        <div id="funny_slider" class="borderDiv">
+            <h3>Funny Slider</h3>
+            <figure>
+                <img src="<?php echo BASE_URL?> /img/funny_slider/question.png" alt="chien">
+                <figcaption class="tacenter"></figcaption>
+            </figure>
+
+            <div class="toggleHide">
+                <div id="slide_button">
+                    <button class="buttonLeft"><i class="fas fa-arrow-circle-left"></i></button>
+                    <button class="buttonPlay"><i class="fas fa-play"></i></button>
+                    <button class="buttonRight"><i class="fas fa-arrow-circle-right"></i></button>
+                </div>
+                <button class="random">Random</button>
+            </div>
+            <button class="display marginAuto afficher" id="toggleButton">Afficher</button>
+        </div>
+
+        <div class="borderDiv">
+            <h3>Carnet d'adresse</h3>
+            <div id="address_book">
+                <aside>
+                    <a href="<?php echo route("portefolio"); ?>" class="aButton">
+                        <button class="deleteAll" type="button">Tout supprimer</button>
+                    </a>
+                    <nav class="navContact">
+
+                    </nav>
+                </aside>
+
+                <div id="addressbook_main">
+                    <form id="form_address_book">
+                        <a class="aButton">
+                            <button type="button" id="newContact">Nouveau contact</button>
+                        </a>
+                        <label for="contact_lastname">Nom</label>
+                        <input type="text" id="contact_lastname" name=contact_lastname required="required">
+                        <label for="contact_firstname">Prénom</label>
+                        <input type="text" id="contact_firstname" name="contact_firstname" required>
+                        <label for="tel">Tel</label>
+                        <input type="tel" id="tel" name="tel">
+
+                        <a class="aButton">
+                            <button type="submit" id="envoi">Ajouter</button>
+                        </a>
+                    </form>
+                    <section id="display_contact">
+
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div id="gif_generator" class="borderDiv">
+            <section>
+                <h3>Générateur de gifs</h3>
+                <form method="POST" id="giphy_form" class="label_gif">
+                    <?php csrf_token()?>
+                    <label for="word">Quel type de gif cherches-tu ?</label>
+                    <input type="text" name="word" id="word" value="" placeholder="Ecrivez un mot">
+                    <button type="button" id="gif_button">Rechercher</button>
+                </form>
+                <div id="gif"></div>
+
+            </section>
+        </div>
+
+
+</main>

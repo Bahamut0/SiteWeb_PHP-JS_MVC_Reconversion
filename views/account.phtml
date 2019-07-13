@@ -1,0 +1,101 @@
+<br>
+<div class="row">
+    <h2>Complétez ou modifiez votre profil</h2>
+    <form method="post" class="col" enctype="multipart/form-data" >
+        <?php csrf_token()?>
+        <div class="form-group row">
+            <div class="col">
+                <label for="first_name">Prénom</label>
+                <input value='<?php echo htmlentities( $data_user["first_name"])?>' name="first_name" id="first_name"
+                       type="text"
+                       class="form-control">
+            </div>
+            <div class="col">
+                <label for="last_name">Nom</label>
+                <input value='<?php echo htmlentities( $data_user["last_name"])?>' id="last_name" name="last_name"
+                       type="text" class="form-control">
+            </div>
+        </div>
+        <div class="input-group flexRowWrapSpaceAround">
+            <div class="input-group-prepend tacenter">
+                <img class="circleAccount " src="<?php echo htmlentities(BASE_URL.$data_user['imageUrl']) ?>"
+                     alt="Avatar">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <span>Choisissez votre avatar</span>
+            </div>
+        </div>
+        <div class=" custom-file">
+            <input type="file" class="custom-file-input" id="inputImage" name="image">
+            <label class="custom-file-label" for="inputImage"><?php echo htmlentities($data_user['imageUrl']) ?></label>
+        </div>
+
+        <div class="row form-group">
+
+            <div class="col-md-12">
+                <label for="address">Adresse Postale</label>
+                <input value='<?php echo htmlentities( $data_user["address"])?>' id="address" type="text"
+                       name="address" class="form-control">
+            </div>
+            <div class="col">
+                <label for="city">Ville</label>
+                <input type="text" value='<?php echo htmlentities( $data_user["city"])?>' id="city"
+                       name="city" class="form-control">
+            </div>
+            <div class="col">
+                <label for="postal_code">Code Postal</label>
+                <input type="number" value='<?php echo htmlentities( $data_user["postal_code"])?>' id="postal_code"
+                       name="postal_code" class="form-control">
+            </div>
+        </div>
+
+        <div class="row form-group">
+
+            <div class="col">
+                <label for="tel">Téléphone</label>
+                <input value='<?php echo htmlentities( $data_user["phone"])?>' id="tel" type="tel"
+                       name="phone" class="form-control">
+            </div>
+
+            <div class="col">
+                <label for="email">Email</label>
+                <input value='<?php echo htmlentities( $data_user["email"])?>' id="email" type="email"
+                       class="form-control" name="email">
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <div class="col tacenter">
+                <button type="submit" class="btn btn-primary" name="updateAccount">Modifier</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="row">
+    <h2>Modifier votre mot de passe</h2>
+    <form method="post" action="<?php echo route('password')?>" class="col">
+        <?php csrf_token()?>
+        <div class="form-group row">
+            <div class="col">
+                <label for="password">Nouveau mot de passe</label>
+                <input id="password" type="password" class="form-control" name="password">
+            </div>
+            <div class="col">
+                <label for="password_confirm">Confirmation du mot de passe</label>
+                <input type="password" name="password_confirm" id="password_confirm" class="form-control">
+            </div>
+        </div>
+        <br>
+        <div class="row form-group">
+            <div class="col tacenter">
+                <button type="submit" class="btn btn-primary" name="updatePass">Modifier</button>
+            </div>
+        </div>
+
+    </form>
+</div>
